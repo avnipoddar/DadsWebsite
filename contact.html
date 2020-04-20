@@ -174,11 +174,22 @@
     $(document).ready(function() {
         $(document).on('submit', '#contact-form', function() {
           // do your things
-          alert("Your message has been recorded!");
+          e.preventDefault();
+          $.ajax({
+              url : $(this).attr('action') || window.location.pathname,
+              type: "POST",
+              data: $(this).serialize(),
+              success: function (data) {
+                  alert("Your message was sent!")
+              },
+              error: function (jXHR, textStatus, errorThrown) {
+              }
+          });
+
           document.getElementById("contact-form").reset();
           return false;
-          
         });
+
     });
 
   </script>
