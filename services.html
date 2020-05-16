@@ -144,7 +144,29 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC0v9TvRAA8nlJD_y4skU1Jr1dLM61I2bo",
+    authDomain: "astrology-162dd.firebaseapp.com",
+    databaseURL: "https://astrology-162dd.firebaseio.com",
+    projectId: "astrology-162dd",
+    storageBucket: "astrology-162dd.appspot.com",
+    messagingSenderId: "829512403189",
+    appId: "1:829512403189:web:ac58f1996e250a13aa5dbc",
+    measurementId: "G-3RSZ3ZT14Q"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 
 </html>
